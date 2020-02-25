@@ -2,6 +2,7 @@ import React from 'react';
 import { SafeAreaView, StyleSheet, View, Text, StatusBar } from 'react-native';
 import './config/ReactotronConfig';
 import 'react-native-gesture-handler';
+import Route from './routes';
 
 const styles = StyleSheet.create({
   Container: {
@@ -17,12 +18,8 @@ const styles = StyleSheet.create({
 function App() {
   return (
     <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView style={styles.Container}>
-        <View>
-          <Text style={styles.Title}>Welcome to React-Native</Text>
-        </View>
-      </SafeAreaView>
+      <StatusBar barStyle="light-content" backgroundColor="black" />
+      <Route />
     </>
   );
 }
