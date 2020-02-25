@@ -1,6 +1,7 @@
 import React from 'react';
 import { SafeAreaView, StyleSheet, View, Text, StatusBar } from 'react-native';
 import './config/ReactotronConfig';
+import 'react-native-gesture-handler';
 
 const styles = StyleSheet.create({
   Container: {
