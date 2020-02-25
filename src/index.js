@@ -1,5 +1,16 @@
 import React from 'react';
-import {SafeAreaView, StyleSheet, View, Text, StatusBar} from 'react-native';
+import { SafeAreaView, StyleSheet, View, Text, StatusBar } from 'react-native';
+
+const styles = StyleSheet.create({
+  Container: {
+    flex: 1,
+    alignContent: 'center',
+    alignItems: 'center',
+  },
+  Title: {
+    alignContent: 'center',
+  },
+});
 
 function App() {
   return (
@@ -13,16 +24,5 @@ function App() {
     </>
   );
 }
-
-const styles = StyleSheet.create({
-  Container: {
-    flex: 1,
-    alignContent: 'center',
-    alignItems: 'center',
-  },
-  Title: {
-    alignContent: 'center',
-  },
-});
 
 export default App;
