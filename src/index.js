@@ -1,28 +1,21 @@
 import React from 'react';
-import { SafeAreaView, StyleSheet, View, Text, StatusBar } from 'react-native';
+import { Provider } from 'react-redux';
+import { StatusBar } from 'react-native';
+import './config/ReactotronConfig';
+import 'react-native-gesture-handler';
+import Route from './routes';
+import NavigationService from './services/navigation';
+import store from './store/';
 
-function App() {
+export default function App() {
   return (
     <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView style={styles.Container}>
-        <View>
-          <Text style={styles.Title}>Welcome to React-Native</Text>
-        </View>
-      </SafeAreaView>
+      <Provider store={store}>
+        <StatusBar barStyle="light-content" backgroundColor="black" />
+        <Route
+          ref={navigatorRef => NavigationService.setNavigator(navigatorRef)}
+        />
+      </Provider>
     </>
   );
 }
-
-const styles = StyleSheet.create({
-  Container: {
-    flex: 1,
-    alignContent: 'center',
-    alignItems: 'center',
-  },
-  Title: {
-    alignContent: 'center',
-  },
-});
-
-export default App;
