@@ -7,7 +7,7 @@ import Route from './routes';
 import NavigationService from './services/navigation';
 import store from './store/';
 
-function App() {
+export default function App() {
   return (
     <>
       <Provider store={store}>
@@ -19,5 +19,3 @@ function App() {
     </>
   );
 }
-
-export default App;
