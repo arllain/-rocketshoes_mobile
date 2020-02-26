@@ -8,7 +8,6 @@ export const Container = styled.View`
 `;
 
 export const ProductList = styled.View`
-  margin: 60px 5px;
   background-color: ${colors.dark};
 `;
 
