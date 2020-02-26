@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
-import { Text, View, FlatList } from 'react-native';
+import { FlatList } from 'react-native';
+import { connect } from 'react-redux';
+import api from '../../services/api';
+import { formatPrice } from '../../util/format';
+import Icon from 'react-native-vector-icons/MaterialIcons';
+import colors from '../../styles/colors';
 import {
   Container,
   ProductList,
@@ -12,10 +17,6 @@ import {
   ProductAmount,
   ProductAmountText,
 } from './styles';
-import api from '../../services/api';
-import { formatPrice } from '../../util/format';
-import Icon from 'react-native-vector-icons/MaterialIcons';
-import colors from '../../styles/colors';
 
 export default class Home extends Component {
   static navigationOptions = {

@@ -1,12 +1,13 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { formatPrice } from '../../util/format';
+import colors from '../../styles/colors';
+import Icon from 'react-native-vector-icons/MaterialIcons';
+import { Container, ProductList } from './styles';
 
-import { Wrapper } from './styles';
-
-export default function Cart() {
+export default function Cart({ navigation, products }) {
   return (
-    <Wrapper>
-      <Text>Cart</Text>
-    </Wrapper>
+    <Container>
+      <ProductList />
+    </Container>
   );
 }

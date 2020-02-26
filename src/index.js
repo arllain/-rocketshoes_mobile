@@ -1,25 +1,21 @@
 import React from 'react';
-import { SafeAreaView, StyleSheet, View, Text, StatusBar } from 'react-native';
+import { Provider } from 'react-redux';
+import { StatusBar } from 'react-native';
 import './config/ReactotronConfig';
 import 'react-native-gesture-handler';
 import Route from './routes';
-
-const styles = StyleSheet.create({
-  Container: {
-    flex: 1,
-    alignContent: 'center',
-    alignItems: 'center',
-  },
-  Title: {
-    alignContent: 'center',
-  },
-});
+import NavigationService from './services/navigation';
+import store from './store/';
 
 function App() {
   return (
     <>
-      <StatusBar barStyle="light-content" backgroundColor="black" />
-      <Route />
+      <Provider store={store}>
+        <StatusBar barStyle="light-content" backgroundColor="black" />
+        <Route
+          ref={navigatorRef => NavigationService.setNavigator(navigatorRef)}
+        />
+      </Provider>
     </>
   );
 }
