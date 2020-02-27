@@ -69,6 +69,7 @@ axios
 - [eslint-plugin-import](https://github.com/benmosher/eslint-plugin-import) - eslint plugin import
 - [eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier) - eslint plugin prettier
 - [eslint-config-airbnb-base](https://github.com/airbnb/javascript/tree/master/packageseslint-config-airbnb-base) - packageseslint-config-airbnb-base
+- [eslint-plugin-react-hooks](https://github.com/facebook/react/tree/master/packages/eslint-plugin-react-hooks) - eslint-plugin-react-hooks
 
 ## ✍️ Authors <a name = "authors"></a>
 
